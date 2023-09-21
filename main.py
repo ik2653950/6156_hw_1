@@ -12,7 +12,10 @@ students_resource = StudentsResource()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {
+        "message": "Hello World",
+        "Sender": "HY"
+            }
 
 
 @app.get("/hello/{name}")
@@ -34,4 +37,5 @@ async def get_students():
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8012)
+    #uvicorn.run(app, host="0.0.0.0", port=8012)
+    uvicorn.run(app, host="127.0.0.1", port=8012)
